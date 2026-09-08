@@ -48,12 +48,6 @@
 .trust-strip span{font-size:12px;color:var(--color-text-muted,#697386);}
 @media(max-width:700px){.trust-strip__grid{grid-template-columns:1fr}.trust-strip__grid>div{border-inline-start:0;border-bottom:1px solid var(--color-border,#e5e7eb)}.trust-strip__grid>div:last-child{border-bottom:0}}
 
-.official-paper{position:relative;overflow:hidden;padding:0!important;background:#fff!important;border-radius:28px;box-shadow:0 30px 80px rgba(0,0,0,.25)}
-.official-paper img{display:block;width:100%;height:auto;aspect-ratio:1025/265;object-fit:cover;object-position:center top}
-.official-paper__badge{position:absolute;top:18px;right:18px;z-index:2;background:rgba(11,18,32,.86);color:#fff;border:1px solid rgba(255,255,255,.14);padding:7px 11px;border-radius:999px;font-size:11px}
-.official-paper__caption{padding:18px 22px 22px;background:#fff;color:#111827;display:flex;justify-content:space-between;align-items:center;gap:16px}.official-paper__caption strong{font-size:17px}.official-paper__caption span{font-size:12px;color:#667085}
-.official-section{background:#fff}.official-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}.official-preview{border:1px solid var(--line);border-radius:26px;overflow:hidden;background:#fafbfc;box-shadow:0 20px 60px rgba(15,23,42,.08)}.official-preview img{display:block;width:100%;height:auto}.official-preview__line{height:1px;background:var(--line)}.feature-row{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}.feature-row:last-child{border-bottom:0}.feature-row>span{font-size:13px;font-weight:800;color:#a17d38;min-width:32px}.feature-row h3{margin:0 0 5px;font-size:18px}.feature-row p{margin:0;color:var(--muted);font-size:14px}
-@media(max-width:900px){.official-grid{grid-template-columns:1fr}.official-paper__caption{display:block}.official-paper__caption span{display:block;margin-top:4px}}
 </style>
 </head>
 <body>
@@ -62,16 +56,8 @@
   <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
-        <a href="#" class="logo">
-          <svg class="logo__mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="لوگو اقبالیان">
-            <rect x="2" y="2" width="44" height="44" rx="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
-            <path d="M16 14v20M16 14h10a6 6 0 0 1 0 12H16M30 18l4 4-4 4M34 22h-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            <circle cx="24" cy="40" r="1.5" fill="currentColor"/>
-          </svg>
-          <div class="logo__text">
-            <span class="logo__name">اقبالیان</span>
-            <span class="logo__desc">وکیل پایه یک دادگستری</span>
-          </div>
+        <a href="#" class="logo logo--card" aria-label="صفحه اصلی علیرضا اقبالیان">
+          <img class="header-card" src="business-card.jpg" alt="کارت ویزیت علیرضا اقبالیان، وکیل پایه یک دادگستری" loading="eager" decoding="sync">
         </a>
 
         <nav class="nav" aria-label="ناوبری اصلی">
@@ -168,10 +154,21 @@
         </div>
 
         <div class="hero__visual reveal reveal--delay-2">
-          <div class="hero__visual-card official-paper">
-            <div class="official-paper__badge">سربرگ رسمی دفتر</div>
-            <img src="letterhead-header.jpg" alt="سربرگ رسمی علیرضا اقبالیان، وکیل پایه یک دادگستری" loading="eager">
-            <div class="official-paper__caption"><strong>علیرضا اقبالیان</strong><span>وکیل پایه یک دادگستری</span></div>
+          <div class="hero__visual-card">
+            <div class="hero__visual-content">
+              <svg class="hero__visual-scales" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M32 8v40M24 52h16M18 56h28" stroke-linecap="round"/>
+                <path d="M10 18h44M32 12l-12 6M32 12l12 6" stroke-linecap="round"/>
+                <path d="M10 18l-7 16h14L10 18ZM54 18l-7 16h14l-7-16Z"/>
+                <path d="M3 34c2 4 5 6 7 6s5-2 7-6M47 34c2 4 5 6 7 6s5-2 7-6"/>
+              </svg>
+              <div class="hero__visual-title">رویکرد حرفه‌ای به پرونده</div>
+              <div class="hero__visual-desc">بررسی دقیق مستندات، تحلیل حقوقی و انتخاب مسیر متناسب با موضوع پرونده</div>
+              <div class="hero__visual-badge">
+                <div class="hero__visual-badge-value">دقت</div>
+                <div class="hero__visual-badge-label">در پیگیری حقوقی</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

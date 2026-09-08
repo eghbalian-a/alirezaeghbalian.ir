@@ -1531,3 +1531,31 @@ select {
 .cta-band{background:#0b1220;color:#fff;border-radius:30px;padding:36px;display:flex;justify-content:space-between;align-items:center;gap:25px}.cta-band p{color:#b8c2d0;margin:6px 0 0}
 .footer-nav-pages{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px}.footer-nav-pages a{color:#c5cedb;font-size:12px}
 @media(max-width:800px){.page-grid{grid-template-columns:1fr}.cta-band{display:block}.cta-band .btn{margin-top:20px}}
+
+/* ============================================
+   Brand identity — business card based
+   ============================================ */
+.official-paper{display:none!important}
+.brand-card-wrap{position:relative;width:min(100%,470px);margin-inline:auto;isolation:isolate;transform:rotate(-1.2deg);}
+.brand-card{position:relative;z-index:2;display:block;width:100%;height:auto;border-radius:22px;box-shadow:0 28px 70px rgba(20,32,45,.22),0 8px 24px rgba(0,137,190,.12);border:8px solid rgba(255,255,255,.96);background:#fff;}
+.brand-card-glow{position:absolute;z-index:1;inset:10% -8% -12% 8%;border-radius:50%;background:radial-gradient(circle,rgba(0,157,218,.24),transparent 68%);filter:blur(18px);}
+.brand-card-wrap::after{content:'';position:absolute;z-index:3;inset:8px;border-radius:15px;pointer-events:none;border:1px solid rgba(0,0,0,.08);}
+@media(max-width:900px){.brand-card-wrap{max-width:430px;transform:none}.brand-card{border-width:6px;border-radius:18px}.hero__visual{min-height:auto;margin-top:1rem}}
+@media(max-width:520px){.brand-card-wrap{width:94%}.brand-card{border-width:4px;border-radius:14px}}
+
+/* Header business card: the original card image is used unchanged. */
+.logo--card{display:flex;align-items:center;justify-content:flex-start;width:auto;min-width:0;overflow:visible;}
+.header-card{display:block;width:clamp(155px,16vw,215px);height:auto;aspect-ratio:3/2;object-fit:contain;object-position:center;flex:none;}
+.logo--card:hover{background:transparent;}
+
+/* The card belongs only to the header; the hero uses a separate legal visual. */
+.brand-card-wrap,.brand-card,.brand-card-glow{display:none!important;}
+
+@media(max-width:960px){
+  .header__inner{padding-block:.55rem;}
+  .header-card{width:170px;}
+}
+@media(max-width:640px){
+  .header-card{width:145px;}
+  .header__inner{gap:.5rem;}
+}
